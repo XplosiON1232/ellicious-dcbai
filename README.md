@@ -8,6 +8,7 @@ It uses the [unofficial character.ai node.js wrapper](https://github.com/realcol
 - 🤝 Works in dms and servers
 - 🗣️ Can have conversations with multiple people at once
 - 😊 Realistic conversations powered by [character.ai](https://beta.character.ai)
+- 🧠 Remembers conversations with different people
 
 ### Upcoming features
 - 👀 Ability to see and understand images
