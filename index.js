@@ -1,9 +1,15 @@
+// Config
+const fs = require('fs');
+const config = JSON.parse(fs.readFileSync('config.json'));
+const guest = config['run-as-guest'];
+const ooc = config['use-ooc'];
+const dctoken = config['discord-token'];
+const authtoken = config['character-ai-authtoken'];
+const characterId = config['character-id'];
+
 // Discord setup
 const { Client } = require('discord.js-selfbot-v13');
 const client = new Client({
-	// See other options here
-	// https://discordjs-self-v13.netlify.app/#/docs/docs/main/typedef/ClientOptions
-	// All partials are loaded automatically
     checkUpdate: false
 });
 
@@ -16,17 +22,13 @@ const CharacterAI = require('node_characterai');
 const characterAI = new CharacterAI();
 
 (async() => {
-    // await characterAI.authenticateAsGuest();
-    const authtoken = "Enter CharacterAI Authtoken Here";
-    await characterAI.authenticateWithToken(authtoken);
-
-    // const characterId = "8_1NyR8w1dOXmI1uWaieQcd147hecbdIK7CeEAIrdJw" // Discord moderator
-    const characterId = "aKm7p1EvQ9If1Apr0CDWWMWTJfE2-q0CBKTqtKEfQaI" // Ellie v2
+    if (guest == true) {
+        await characterAI.authenticateAsGuest();
+    } else {
+        await characterAI.authenticateWithToken(authtoken);
+    }
 
     const chat = await characterAI.createOrContinueChat(characterId);
-    // const response = await chat.sendAndAwaitResponse('*start of conversation*', true);
-
-    // console.log(response);
 
     // Functions
     client.on('message', async(message) => {
@@ -34,7 +36,12 @@ const characterAI = new CharacterAI();
             return;
         }
         try {
-            const resp = await chat.sendAndAwaitResponse(message.content, true);
+            if (ooc == true) {
+                var msg = `[New message sent by '${message.author.username}#${message.author.discriminator}' in DMs]: ${message.content}`;
+                const resp = await chat.sendAndAwaitResponse(msg, true);
+            } else {
+                const resp = await chat.sendAndAwaitResponse(message.content, true);
+            }
             message.channel.send(resp.text);
         } catch (error) {
             console.log(error);
@@ -42,13 +49,5 @@ const characterAI = new CharacterAI();
         
     });
 })();
-
-
-
-
-
-
-
-dctoken = 'Enter Token Here';
 
 client.login(dctoken);

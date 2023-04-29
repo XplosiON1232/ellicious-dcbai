@@ -1,0 +1,7 @@
+{
+    "run-as-guest": false,
+    "use-ooc": true,
+    "discord-token": "",
+    "character-ai-authtoken": "",
+    "character-id": ""
+}
