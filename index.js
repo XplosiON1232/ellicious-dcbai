@@ -36,13 +36,16 @@ const characterAI = new CharacterAI();
             return;
         }
         try {
+            message.channel.sendTyping();
             if (ooc == true) {
                 var msg = `[New message sent by '${message.author.username}#${message.author.discriminator}' in DMs]: ${message.content}`;
                 const resp = await chat.sendAndAwaitResponse(msg, true);
+                message.channel.send(resp.text);
             } else {
                 const resp = await chat.sendAndAwaitResponse(message.content, true);
+                message.channel.send(resp.text);
             }
-            message.channel.send(resp.text);
+            // message.channel.send(resp.text);
         } catch (error) {
             console.log(error);
         }
