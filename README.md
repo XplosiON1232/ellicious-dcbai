@@ -14,7 +14,7 @@ It uses the [unofficial character.ai node.js wrapper](https://github.com/realcol
 
 ### Upcoming features
 - 👀 Ability to see and understand images
-- 🖼️ Ability to generate photos and send them
+- 🖼️ Ability to generate images and send them
 - 🔄 Reset memory (without having to do this manually at [character.ai](https://beta.character.ai))
 - 🗣️ Can have conversations with multiple people at once
 - 🧠 Remembers conversations with different people
