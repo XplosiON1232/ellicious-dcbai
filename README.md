@@ -3,23 +3,27 @@ Ellicious is a Discord selfbot using AI powered by [character.ai](https://beta.c
 
 It uses the [unofficial character.ai node.js wrapper](https://github.com/realcoloride/node_characterai) by [realcoloride](https://github.com/realcoloride), as well as the [discord.js-selfbot](https://github.com/aiko-chan-ai/discord.js-selfbot-v13) for using Discord's API. For issues or to leave suggestions, please make a post [here](https://github.com/XplosiON1232/ellicious-dcbai/issues) :D
 
+> ⚠ Ellicious is in **VERY** early development<br>
+> ⚠ It can currely only have a conversation with one person at a time<br>
+> ⚠ To reset a conversation, you must manually `Save and Start New Chat` at [character.ai](https://beta.character.ai) for that specific character
+
 ## Features
 - ✨ Easy to setup and use
 - 🤝 Works in dms and servers
-- 🗣️ Can have conversations with multiple people at once
 - 😊 Realistic conversations powered by [character.ai](https://beta.character.ai)
-- 🧠 Remembers conversations with different people
 
 ### Upcoming features
 - 👀 Ability to see and understand images
 - 🖼️ Ability to generate photos and send them
 - 🔄 Reset memory (without having to do this manually at [character.ai](https://beta.character.ai))
+- 🗣️ Can have conversations with multiple people at once
+- 🧠 Remembers conversations with different people
 
 # Setup
 ## Necessities
 - [Node.js](https://nodejs.org/en/download) (for linux, run `sudo apt install nodejs`)
 - [Character.ai](https://beta.character.ai) account
-- [Discord](https://discord.com/register) account (instructions below)
+- [Discord](https://discord.com/register) account ([instructions below](#-discord-setup))
 
 ## ✨ Ellicious Setup
 1. Click the green button saying `<> Code` and choose `Download ZIP`, or click here: [direct download](https://github.com/XplosiON1232/ellicious-dcbai/archive/refs/heads/main.zip)
