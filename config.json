@@ -1,6 +1,6 @@
 {
     "run-as-guest": false,
-    "use-ooc": true,
+    "use-ooc": false,
     "discord-token": "",
     "character-ai-authtoken": "",
     "character-id": ""
