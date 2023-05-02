@@ -22,6 +22,7 @@ It uses the [unofficial character.ai node.js wrapper](https://github.com/realcol
 # Setup
 ## Necessities
 - [Node.js](https://nodejs.org/en/download) (for linux, run `sudo apt install nodejs`)
+- NPM (included with Node.js)
 - [Character.ai](https://beta.character.ai) account
 - [Discord](https://discord.com/register) account ([instructions below](#-discord-setup))
 
@@ -30,8 +31,9 @@ It uses the [unofficial character.ai node.js wrapper](https://github.com/realcol
 2. Extract the ZIP file
 3. Open `config.json` and enter your credentials (see `💬 Discord Setup` and ``)
 4. Open CMD in that directory (click the file directory address field in Explorer when you're in that folder, and enter `cmd`)
-5. Enter `node index.js`
-6. 🎉 Done! Wait a minute and the bot should work :D
+5. Enter `npm install` to install all required dependencies
+6. Once finished, enter `node index.js` to start the application
+7. 🎉 Done! Wait a minute and the bot should work :D
 
 ## 💬 Discord Setup
 1. Go to [discord.com/register](https://discord.com/register)<br>- Use icongito mode on your browser if the link takes you to the Discord app interface.
