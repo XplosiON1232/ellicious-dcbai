@@ -41,6 +41,7 @@ const characterAI = new CharacterAI();
             // Reset the character's memory (Save and Start New Chat)
             const resp =  await chat.saveAndStartNewChat()
             message.channel.send(resp);
+            return;
         }
         try {
             message.channel.sendTyping();
