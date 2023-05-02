@@ -5,17 +5,16 @@ It uses the [unofficial character.ai node.js wrapper](https://github.com/realcol
 
 > ⚠ Ellicious is in **VERY** early development<br>
 > ⚠ It can currely only have a conversation with one person at a time<br>
-> ⚠ To reset a conversation, you must manually `Save and Start New Chat` at [character.ai](https://beta.character.ai) for that specific character
 
 ## Features
 - ✨ Easy to setup and use
 - 🤝 Works in dms and servers
 - 😊 Realistic conversations powered by [character.ai](https://beta.character.ai)
+- 🔄 Reset memory (`.reset`, where `.` is the prefix, and can be changed in `config.json`)
 
 ### Upcoming features
 - 👀 Ability to see and understand images
 - 🖼️ Ability to generate images and send them
-- 🔄 Reset memory (without having to do this manually at [character.ai](https://beta.character.ai))
 - 🗣️ Can have conversations with multiple people at once
 - 🧠 Remembers conversations with different people
 
