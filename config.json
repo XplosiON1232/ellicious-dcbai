@@ -1,4 +1,5 @@
 {
+    "prefix": ".",
     "run-as-guest": false,
     "use-ooc": false,
     "discord-token": "",

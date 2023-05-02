@@ -6,6 +6,7 @@ const ooc = config['use-ooc'];
 const dctoken = config['discord-token'];
 const authtoken = config['character-ai-authtoken'];
 const characterId = config['character-id'];
+const prefix = config['prefix']
 
 // Discord setup
 const { Client } = require('discord.js-selfbot-v13');
@@ -34,6 +35,12 @@ const characterAI = new CharacterAI();
     client.on('message', async(message) => {
         if (message.author.id === client.user.id) {
             return;
+        }
+        // Commands
+        if (message.content === `${prefix}reset`) {
+            // Reset the character's memory (Save and Start New Chat)
+            const resp =  await chat.saveAndStartNewChat()
+            message.channel.send(resp);
         }
         try {
             message.channel.sendTyping();
